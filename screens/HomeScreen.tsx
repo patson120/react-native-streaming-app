@@ -1,11 +1,12 @@
 
 
 import { StatusBar } from 'expo-status-bar';
-import React from 'react'
+import React, { FC } from 'react'
 import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import * as Icon from "react-native-feather";
 import { themeColors } from '../themes';
+import PrimaryButton from '../components/PrimaryButton';
 
 
 const HomeScreen = () => {
@@ -26,7 +27,7 @@ const HomeScreen = () => {
                     height: hp('55%'),
                     width: wp('80%'),
                 }}
-                    className="overflow-visible bg-transparent"
+                    className="overflow-visible bg-transparent shadow-sm"
                 >
                     {/* Image  */}
                     <Image
@@ -57,21 +58,17 @@ const HomeScreen = () => {
 
                     {/* Description */}
                     <Text
-                        className="text-sm text-black text-center mb-2"
+                        className="text-sm text-black text-center mb-3"
                     >Listen to your favorite music whenever and wherever you want</Text>
 
                     {/* Buttons */}
-                    <TouchableOpacity
-                        onPress={() => {
-                            console.log("Press login");
+                    <PrimaryButton
+                        text="Log In"
+                        classes='rounded-xl'
+                        onPressButton={() => {
+                            console.log("Press login !");
                         }}
-                        style={{ backgroundColor: themeColors.primaryColor(1) }}
-
-                        className="rounded-xl p-3 items-center"
-                    >
-                        <Text className="text-white text-lg font-semibold" >Log In</Text>
-                    </TouchableOpacity>
-
+                    />
                     <TouchableOpacity
                         onPress={() => {
                             console.log("Press signup");
@@ -90,3 +87,5 @@ const HomeScreen = () => {
 }
 
 export default HomeScreen;
+
+
