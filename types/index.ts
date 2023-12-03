@@ -4,3 +4,4 @@ export type PrimaryButtonProps = {
     classes?: string,
     onPressButton: () => void
 }
+
