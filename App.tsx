@@ -5,3 +5,5 @@ import Navigation from './navigations';
 }
 
 export default App;
+
+// eas build -p android --profile preview

@@ -9,5 +9,5 @@ type ThemeColors = {
 export const themeColors: ThemeColors = {
     text: "#f97316",
     bgColor: opacity => `rgba(251, 146, 60, ${opacity})`,
-    primaryColor: opacity => `rgba(13, 148, 136, ${opacity})`, // tel color
+    primaryColor: opacity => `rgba(4, 120, 113, ${opacity})`, // tel color
 }
