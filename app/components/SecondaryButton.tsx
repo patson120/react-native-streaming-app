@@ -15,7 +15,7 @@ const SecondaryButton: FC<PrimaryButtonProps> = ({ text, onPressButton, classes 
                 <Text className="text-white text-lg font-semibold" >{text}</Text>
                 <View className="mt-1">
                     <Image
-                        source={require("../assets/images/logos_google-gmail.png")}
+                        source={require("../../assets/images/logos_google-gmail.png")}
                         width={20} height={20}
                     />
                 </View>

@@ -9,7 +9,7 @@ import PrimaryButton from '../components/PrimaryButton';
 import SecondaryButton from '../components/SecondaryButton';
 import { themeColors } from '../themes';
 import { PropsType } from '../types/navigation';
-const backgroungImage = require("../assets/images/img1.png");
+const backgroungImage = require("../../assets/images/img1.png");
 
 
 

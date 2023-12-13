@@ -32,7 +32,7 @@ const StartScreen = ({ navigation }: PropsType) => {
                 >
                     {/* Image  */}
                     <Image
-                        source={require("../assets/images/img1.png")}
+                        source={require("../../assets/images/img1.png")}
                         className="w-full h-full object-cover rounded-[40px] rounded-br-[100px]"
                     />
 
@@ -42,7 +42,7 @@ const StartScreen = ({ navigation }: PropsType) => {
                     >
                         <View className="h-[80px] w-[80px]">
                             <Image
-                                source={require("../assets/images/elipse1.png")}
+                                source={require("../../assets/images/elipse1.png")}
                                 className="w-full h-full object-cover"
                             />
                             <View
