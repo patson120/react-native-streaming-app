@@ -1,0 +1,4 @@
+
+
+// Commande d'excution pour la production de apk de notre application
+=> eas build -p android --profile preview
