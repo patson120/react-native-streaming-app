@@ -1,16 +1,16 @@
 
 
 import { StatusBar } from 'expo-status-bar';
-import React, { FC } from 'react'
+import React from 'react'
 import { Image, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import * as Icon from "react-native-feather";
 import { themeColors } from '../themes';
 import PrimaryButton from '../components/PrimaryButton';
-import { PropsType } from '../types/navigation';
+import Navigation from '../Service/Navigation';
 
 
-const StartScreen = ({ navigation }: PropsType) => {
+const StartScreen = () => {
     return (
         <SafeAreaView className="flex-1">
             <StatusBar
@@ -32,17 +32,16 @@ const StartScreen = ({ navigation }: PropsType) => {
                 >
                     {/* Image  */}
                     <Image
-                        source={require("../assets/images/img1.png")}
+                        source={require("../../assets/images/img1.png")}
                         className="w-full h-full object-cover rounded-[40px] rounded-br-[100px]"
                     />
 
                     <View
-                        // style={{ backgroundColor: themeColors.primaryColor(1) }}
                         className="absolute -bottom-1 -right-1 h-[80px] w-[80px] rounded-full justify-center items-center p-1 pl-2"
                     >
                         <View className="h-[80px] w-[80px]">
                             <Image
-                                source={require("../assets/images/elipse1.png")}
+                                source={require("../../assets/images/elipse1.png")}
                                 className="w-full h-full object-cover"
                             />
                             <View
@@ -78,12 +77,12 @@ const StartScreen = ({ navigation }: PropsType) => {
                         text="Log In"
                         classes='rounded-xl'
                         onPressButton={() => { 
-                            navigation.navigate("Login")
+                            Navigation.navigate("Login")
                         }}
                     />
                     <TouchableOpacity
                         onPress={() => {
-                            navigation.navigate("SignUp")
+                            Navigation.navigate("SignUp")
                         }}
                         className="bg-t p-3 items-center"
                     >

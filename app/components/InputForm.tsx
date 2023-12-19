@@ -1,5 +1,5 @@
 
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { KeyboardTypeOptions, TextInput, TouchableOpacity, View } from "react-native";
 import { themeColors } from "../themes";
 import * as Icon from "react-native-feather";

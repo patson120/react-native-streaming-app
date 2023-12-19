@@ -1,12 +1,11 @@
 
-
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { View, TextInput, Text, ScrollView, TouchableOpacity } from "react-native";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import * as Icon from "react-native-feather";
 
-const HomeScreen = () => {
+const CategorieScreen = () => {
 
     const [search, setSearch] = useState("")
     return (
@@ -50,15 +49,13 @@ const HomeScreen = () => {
                         value={search}
                         onChangeText={(text) => setSearch(text)}
                         autoCorrect={true}
-
                         className="flex-1 text-base pl-6"
                     />
                     <TouchableOpacity
                         className="pr-4"
                         onPress={() => {
                             console.log("Search");
-                        }}
-                    >
+                        }}>
                         {
                             <Icon.Search stroke="#cfdfcf" strokeWidth={2} fill="#f6f7fb" height={25} width={25} />
                         }
@@ -68,4 +65,5 @@ const HomeScreen = () => {
         </SafeAreaView>
     );
 }
-export default HomeScreen;
+
+export default CategorieScreen;

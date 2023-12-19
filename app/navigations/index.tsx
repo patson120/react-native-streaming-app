@@ -2,7 +2,6 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from '../screens/Login';
-import { RootStackParamList } from '../types/navigation';
 import StartScreen from '../screens/StartScreen';
 import SignUpScreen from '../screens/Signup';
 import HomeScreen from '../screens/HomeScreen';
@@ -12,6 +11,7 @@ import MusicScreen from '../screens/MusicScreen';
 import CategorieScreen from '../screens/CategorieScreen';
 import { themeColors } from '../themes';
 import * as Icon from "react-native-feather";
+import Navigations from '../Service/Navigation';
 
 
 const Tab = createBottomTabNavigator();
@@ -83,15 +83,19 @@ export const Tabs = () => {
 }
 
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer
+      ref={r => Navigations.setTopLevelNavigator(r)}
+    >
       <Stack.Navigator
         initialRouteName='Start'
         screenOptions={{
-          headerShown: false
+          headerShown: false,
+          gestureEnabled: true,
+          gestureDirection: 'horizontal',
         }}>
         <Stack.Screen name="Start" component={StartScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
