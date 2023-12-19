@@ -9,7 +9,7 @@ const HomeScreen = () => {
     return (
         <SafeAreaView >
             <View>
-                <Text>Home Screen </Text>
+                <Text> Home Screen </Text>
                 <StatusBar style='dark' />
             </View>
         </SafeAreaView>

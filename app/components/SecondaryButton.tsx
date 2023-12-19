@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { PrimaryButtonProps } from "../types";
 

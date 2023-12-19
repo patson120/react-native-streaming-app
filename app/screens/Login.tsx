@@ -2,20 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react'
 import { KeyboardAvoidingView, TouchableOpacity, Platform, SafeAreaView, Text, View } from 'react-native'
 import InputForm from '../components/InputForm';
-import { useRoute } from '@react-navigation/native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import PrimaryButton from '../components/PrimaryButton';
 import SecondaryButton from '../components/SecondaryButton';
 import { themeColors } from '../themes';
-import { PropsType } from '../types/navigation';
-const backgroungImage = require("../../assets/images/img1.png")
+import Navigation from '../Service/Navigation';
 
 
-const LoginScreen = ({ navigation }: PropsType) => {
+const LoginScreen = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
-    const route = useRoute();
 
     return (
         <SafeAreaView className="flex-1 bg-white" >
@@ -57,7 +53,7 @@ const LoginScreen = ({ navigation }: PropsType) => {
                             <PrimaryButton
                                 text="Log In"
                                 classes='rounded-xl'
-                                onPressButton={() => navigation.navigate("Tabs")}
+                                onPressButton={() => Navigation.navigate("Tabs")}
                             />
                             <View className="my-2"></View>
                             <SecondaryButton
@@ -72,7 +68,7 @@ const LoginScreen = ({ navigation }: PropsType) => {
                             <View className="flex-row my-10 space-x-2 justify-center items-center">
                                 <Text className="text-sm font-normal">Don't have an account ?</Text>
                                 <TouchableOpacity
-                                    onPress={() => navigation.navigate("SignUp")}
+                                    onPress={() => Navigation.navigate("SignUp")}
                                 >
                                     <Text
                                         style={{ color: themeColors.primaryColor(1) }}
